@@ -1,0 +1,103 @@
+#content {
+  display: grid;
+  justify-items: center;
+}
+
+#circles {
+  position: absolute;
+  bottom: -500px;
+}
+
+#cicles1 {
+  position: absolute;
+  bottom: -550px;
+  width: 1000px;
+  height: 1000px;
+  border: 3px solid #FFFF;
+  border-radius: 50%;
+}
+
+#cicles2 {
+  position: absolute;
+  bottom: -400px;
+  width: 700px;
+  height: 700px;
+  border: 3px solid #FFFF;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  from {
+    transfrom: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation-name: rotate;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: 500px;
+}
+
+@keyframes pulsateBlue {
+  100% {
+    box-shadow:
+      0px 0px 1px 2px rgba(0, 255, 255, 0.5),
+      0px 0px 2px 4px rgba(0, 255, 255, 0.5),
+      0px 0px 4px 8px rgba(0, 255, 255, 0.5),
+      0px 0px 8px 16px rgba(0, 255, 255, 0.5),
+      0px 0px 1px 2px rgba(0, 255, 255, 0.5) inset,
+      0px 0px 2px 4px rgba(0, 255, 255, 0.5) inset,
+      0px 0px 4px 8px rgba(0, 255, 255, 0.5) inset,
+      0px 0px 8px 16px rgba(0, 255, 255, 0.5) inset;
+  }
+  0% {
+    box-shadow:
+      0px 0px 1px 2px rgba(0, 255, 255, 0.5),
+      0px 0px 1px 3px rgba(0, 255, 255, 0.5),
+      0px 0px 3px 6px rgba(0, 255, 255, 0.5),
+      0px 0px 7px 14px rgba(0, 255, 255, 0.5),
+      0px 0px 1px 2px rgba(0, 255, 255, 0.5) inset,
+      0px 0px 1px 3px rgba(0, 255, 255, 0.5) inset,
+      0px 0px 4px 6px rgba(0, 255, 255, 0.5) inset,
+      0px 0px 7px 14px rgba(0, 255, 255, 0.5) inset;
+  }
+}
+
+.pulseBlue {
+  animation: pulsateBlue 1s ease-in-out infinite alternate
+}
+
+@keyframes pulsateRed {
+  100% {
+    box-shadow:
+    0px 0px 1px 2px rgba(183, 9, 76, 0.5),
+    0px 0px 2px 4px rgba(183, 9, 76, 0.5),
+    0px 0px 4px 8px rgba(183, 9, 76, 0.5),
+    0px 0px 8px 16px rgba(183, 9, 76, 0.5),
+    0px 0px 1px 2px rgba(183, 9, 76, 0.5) inset,
+    0px 0px 2px 4px rgba(183, 9, 76, 0.5) inset,
+    0px 0px 4px 8px rgba(183, 9, 76, 0.5) inset,
+    0px 0px 8px 16px rgba(183, 9, 76, 0.5) inset;
+  }
+  0% {
+    box-shadow:
+      0px 0px 1px 2px rgba(183, 9, 76, 0.5),
+      0px 0px 1px 3px rgba(183, 9, 76, 0.5),
+      0px 0px 3px 6px rgba(183, 9, 76, 0.5),
+      0px 0px 7px 14px rgba(183, 9, 76, 0.5),
+      0px 0px 1px 2px rgba(183, 9, 76, 0.5) inset,
+      0px 0px 1px 3px rgba(183, 9, 76, 0.5) inset,
+      0px 0px 4px 6px rgba(183, 9, 76, 0.5) inset,
+      0px 0px 7px 14px rgba(183, 9, 76, 0.5) inset;
+  }
+}
+
+.pulseRed {
+  animation: pulsateRed 1s ease-in-out infinite alternate
+}
