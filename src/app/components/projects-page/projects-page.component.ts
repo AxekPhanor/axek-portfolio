@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { GithubAPIService } from 'src/app/services/github-api.service'
+import { Project } from 'src/app/models/project';
 
 @Component({
   selector: 'app-projects-page',
@@ -6,5 +8,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects-page.component.css']
 })
 export class ProjectsPageComponent {
-
+  @Output() projects : Project[] = [];
+  constructor(private GithubAPIService: GithubAPIService){}
+  ngOnInit() {
+    this.GithubAPIService.getProjects()
+    .then((res) => {
+      for(let data of res.data){
+        console.log(data);
+        let project: Project = {
+          id: data.id,
+          name: data.name,
+          description: "",
+          createdAt: "",
+          htmlUrl: data.html_url,
+          cloneUrl: data.clone_url,
+          downloadUrl: "https://github.com/AxekPhanor/"+data.name+"/archive/refs/heads/master.zip" //downloadUrl API NO LONGER SUPPORT
+        }
+        if(data.description){
+          project.description = data.description;
+        }
+        if(data.created_at){
+          project.createdAt = data.created_at;
+        }
+        this.projects.push(project);
+      }
+    });
+    console.log(this.projects);
+  }
 }

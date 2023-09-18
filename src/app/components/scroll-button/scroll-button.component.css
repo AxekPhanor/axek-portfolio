@@ -1,0 +1,14 @@
+#button-up {
+  position: fixed;
+  bottom: 6em;
+  right: 1em;
+  margin-right: 15px;
+}
+
+#button-down {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  margin-right: 15px;
+}
+

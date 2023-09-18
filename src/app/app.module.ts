@@ -10,14 +10,18 @@ import { ProjectsPageComponent } from './components/projects-page/projects-page.
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { BackgroundComponent } from './components/background/background.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatButtonModule} from '@angular/material/button';
+import { ScrollButtonComponent } from './components/scroll-button/scroll-button.component';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     ProjectsPageComponent,
-    BackgroundComponent
+    ScrollButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +30,9 @@ import { BackgroundComponent } from './components/background/background.componen
     MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

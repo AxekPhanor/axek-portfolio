@@ -1,10 +1,10 @@
-.container{
-  height: 100%;
-  background: inherit;
-  background-color: #252627;
-  color: #FFFFFA;
+.scroll-container {
+  scroll-behavior: smooth;
+  height: 200vh;
+  margin: 0;
+  padding: 0;
 }
-
-#circles{
-
+.scroll-page {
+  display: flex;
+  height: 100vh;
 }
