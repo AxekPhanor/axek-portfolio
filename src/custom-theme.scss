@@ -12,7 +12,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $axek-portfolio-primary: mat.define-palette(mat.$blue-gray-palette, 100);
-$axek-portfolio-accent: mat.define-palette(mat.$blue-gray-palette, 50);
+$axek-portfolio-accent: mat.define-palette(mat.$blue-gray-palette, 100);
 
 // The warn palette is optional (defaults to red).
 $axek-portfolio-warn: mat.define-palette(mat.$red-palette);

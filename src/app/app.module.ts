@@ -14,6 +14,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import { ScrollButtonComponent } from './components/scroll-button/scroll-button.component';
 import {MatCardModule} from '@angular/material/card';
+import { DarkLightModeComponent } from './components/dark-light-mode/dark-light-mode.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import {MatCardModule} from '@angular/material/card';
     MainPageComponent,
     ProjectsPageComponent,
     ScrollButtonComponent,
+    DarkLightModeComponent,
   ],
   imports: [
     BrowserModule,

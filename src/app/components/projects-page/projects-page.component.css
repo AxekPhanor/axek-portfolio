@@ -8,6 +8,8 @@
 }
 
 .card{
+  display: flex;
+  width: 500px;
   margin-top: 10px;
   margin-left: 5px;
 }
@@ -21,3 +23,29 @@
 }
 
 a { color: inherit; }
+
+.content{
+  width: 100%;
+  display: block;
+  overflow-y: auto;
+  margin-left: 5%;
+}
+
+.cardContainer{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+#overview{
+  height: 200px;
+}
+
+#download{
+  position: absolute;
+  right: 10px;
+  top: 50px;
+}
+
+#description{
+  margin-bottom: 10px;
+}

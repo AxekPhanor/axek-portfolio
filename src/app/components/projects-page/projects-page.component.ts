@@ -9,7 +9,9 @@ import { Project } from 'src/app/models/project';
 })
 export class ProjectsPageComponent {
   @Output() projects : Project[] = [];
+
   constructor(private GithubAPIService: GithubAPIService){}
+
   ngOnInit() {
     this.GithubAPIService.getProjects()
     .then((res) => {
@@ -22,17 +24,18 @@ export class ProjectsPageComponent {
           createdAt: "",
           htmlUrl: data.html_url,
           cloneUrl: data.clone_url,
-          downloadUrl: "https://github.com/AxekPhanor/"+data.name+"/archive/refs/heads/master.zip" //downloadUrl API NO LONGER SUPPORT
+          downloadUrl: "https://github.com/AxekPhanor/"+data.name+"/archive/refs/heads/master.zip", //downloadUrl API NO LONGER SUPPORT
         }
         if(data.description){
           project.description = data.description;
         }
         if(data.created_at){
-          project.createdAt = data.created_at;
+          project.createdAt = data.created_at.slice(0, 10);
         }
-        this.projects.push(project);
+        if(project.name != "globalWarming"){
+          this.projects.push(project);
+        }
       }
     });
-    console.log(this.projects);
   }
 }

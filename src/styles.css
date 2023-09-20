@@ -3,11 +3,9 @@
 body {
   margin: 0;
   font-family: 'Aleo';
-  background-image: url('assets/rando.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0%;
   background-attachment: local;
   width: 100%;
 }
-

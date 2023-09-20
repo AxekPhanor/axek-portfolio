@@ -5,7 +5,7 @@ import { Octokit } from 'octokit';
   providedIn: 'root'
 })
 export class GithubAPIService {
-  octokit = new Octokit({auth: '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'});
+  octokit = new Octokit({auth: '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'});
   constructor() {}
   getProjects(){
     return this.octokit.request("GET /user/repos", {});

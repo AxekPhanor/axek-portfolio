@@ -1,16 +1,19 @@
 <div class="content">
-  <span id="title" class="text">Mes réalisations</span>
-  <mat-card *ngFor="let project of projects" class="card">
-    <mat-card-header>
-      <mat-card-title>{{project.name}}</mat-card-title>
-      <a href="{{project.htmlUrl}}"><img id="githubImg" mat-card-sm-image src="../../../assets/github.png"></a>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{project.description}}</p>
-      <p>{{project.createdAt}}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <a href="{{project.downloadUrl}}" download><span class="material-symbols-outlined">download</span></a>
-    </mat-card-actions>
-  </mat-card>
+  <p id="title" class="text">Mes réalisations</p><br>
+  <div class="cardContainer">
+    <mat-card *ngFor="let project of projects" class="card">
+      <mat-card-header>
+        <mat-card-title>{{project.name}}</mat-card-title>
+        <mat-card-subtitle>Créer le : {{project.createdAt}}</mat-card-subtitle>
+        <a href="{{project.htmlUrl}}"><img id="githubImg" mat-card-sm-image src="../../../assets/github.png"></a>
+      </mat-card-header>
+      <mat-card-content>
+        <img id="overview" mat-card-image onerror='this.style.display = "none"' src="../../../assets/overview/{{project.name}}.png">
+        <p id="description" *ngIf="project.description!=''">Description : {{project.description}}</p>
+      </mat-card-content>
+      <mat-card-actions id="download">
+        <a href="{{project.downloadUrl}}" download ><span class="material-symbols-outlined">download</span></a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
