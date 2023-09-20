@@ -17,19 +17,19 @@ export class ScrollButtonComponent {
   }
 
   up() {
-    if (!this.scrolling) {
+    if (this.scrolling) {
       this.scrolling = true; // Indique que le défilement est en cours
       this.page1.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
     }
   }
 
   down() {
-    if (!this.scrolling) {
+    if (this.scrolling) {
       this.scrolling = true; // Indique que le défilement est en cours
       this.page2.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
     }
   }
-
+  /*
   @HostListener('document:scroll')
   scroll() {
     if (!this.scrolling) {
@@ -52,7 +52,7 @@ export class ScrollButtonComponent {
     if (window.scrollY === 0 || window.scrollY + window.innerHeight === document.body.scrollHeight) {
       this.scrolling = false; // Indique que le défilement est terminé
     }
-  }
+  }*/
 }
 
 

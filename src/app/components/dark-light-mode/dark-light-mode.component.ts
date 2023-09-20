@@ -37,6 +37,6 @@ export class DarkLightModeComponent {
   }
   lightmode(){
     sessionStorage.setItem('dark', 'false');
-    window.location.reload()
+    window.location.reload();
   }
 }

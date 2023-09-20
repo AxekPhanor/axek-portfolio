@@ -9,3 +9,7 @@ body {
   background-attachment: local;
   width: 100%;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
