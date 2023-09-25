@@ -1,13 +1,15 @@
 #button-up {
   position: fixed;
-  top: 6em;
+  top: 1em;
   right: 1em;
   margin-right: 15px;
+  z-index: 2;
 }
 
 #button-down {
   position: fixed;
-  top: 11em;
+  top: 6em;
   right: 1em;
   margin-right: 15px;
+  z-index: 2;
 }

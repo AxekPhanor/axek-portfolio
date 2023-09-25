@@ -16,7 +16,6 @@ export class ProjectsPageComponent {
     this.GithubAPIService.getProjects()
     .then((res) => {
       for(let data of res.data){
-        console.log(data);
         let project: Project = {
           id: data.id,
           name: data.name,

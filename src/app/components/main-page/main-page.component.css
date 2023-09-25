@@ -27,12 +27,26 @@
 mat-card {
   width: 100%;
   margin-top: 15%;
-  margin-bottom: 15%;
+  margin-bottom: 25%;
   margin-right: 20%;
   margin-left: 20%;
   opacity: 0.6;
+  overflow: hidden;
 }
 
 #content {
   margin-left: 15px;
+}
+
+#infoHendaye {
+  position: absolute;
+  top: 51%;
+  right: 22%;
+  transform: translate(-78%, -49%);
+}
+
+p {
+  font-size: 24px;
+  text-align: center;
+  vertical-align: text-bottom;
 }
