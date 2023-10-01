@@ -15,6 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { ScrollButtonComponent } from './components/scroll-button/scroll-button.component';
 import {MatCardModule} from '@angular/material/card';
 import { DarkLightModeComponent } from './components/dark-light-mode/dark-light-mode.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { DarkLightModeComponent } from './components/dark-light-mode/dark-light-
     MatSlideToggleModule,
     MatButtonModule,
     MatCardModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

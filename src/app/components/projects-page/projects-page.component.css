@@ -2,24 +2,64 @@
   color: #F5F4F5;
 }
 
-#title {
-  font-size: xx-large;
-  margin-left: 10px;
+@media screen and (max-width: 767px){
+  #title {
+    margin-top: 30%;
+    font-size: xx-large;
+    text-align: center;
+    vertical-align: text-bottom;
+  }
+
+  .content{
+    margin-bottom: 20%;
+  }
+
+  mat-card {
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 20px;
+    height: auto;
+    transition-duration: 0.3s;
+  }
+
+  .card:hover{
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    z-index: 1;
+    padding-left: -5px;
+  }
+
+  #overview{
+    height: 100px;
+  }
 }
 
-.card{
+@media screen and (min-width: 768px){
+  #title {
+    margin-top: 20%;
+    font-size: xx-large;
+    text-align: center;
+    vertical-align: text-bottom;
+  }
 
-  display: flex;
-  width: 500px;
-  margin-top: 10px;
-  margin-left: 5px;
-  height: auto;
-}
+  mat-card{
+    width: 500px;
+    margin-top: 10px;
+    margin-left: 5px;
+    height: auto;
+    transition-duration: 0.3s;
+  }
 
-.card:hover{
-  transform: scale(1.12);
-  z-index: 1;
-  padding-left: -5px;
+  .card:hover{
+    transform: scale(1.12);
+    transition-duration: 0.3s;
+    z-index: 1;
+    padding-left: -5px;
+  }
+
+  #overview{
+    height: 200px;
+  }
 }
 
 #githubImg{
@@ -33,19 +73,14 @@
 a { color: inherit; }
 
 .content{
-  width: 100%;
-  display: block;
-  overflow-y: auto;
-  padding-left: 5%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3em;
 }
 
 .cardContainer{
   display:flex;
   flex-wrap: wrap;
-}
-
-#overview{
-  height: 200px;
 }
 
 #download{

@@ -3,14 +3,7 @@
 body {
   margin: 0;
   font-family: 'Aleo';
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 0%;
-  background-attachment: local;
-  width: 100%;
-  position: relative;
+  background-color: #424242;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
+

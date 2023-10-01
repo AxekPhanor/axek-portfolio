@@ -1,0 +1,25 @@
+@import '../../../typed';
+
+#text{
+  color: white;
+  text-align: center;
+  vertical-align: text-bottom;
+  @include typed("Bonjour, je suis développeur web autodidacte et j'aimerai en faire mon métier !\A Je consacre mon temps libre à la voile, randonnée, et bien entendu au dev 😉.\A Si vous êtes interréssé par mon profil contacter moi à cette adresse : axel.phanor64@gmail.com",
+  (type: .04, pause-typed: 8, delete: .03));
+  height: 1px;
+}
+
+@media screen and (max-width: 767px){
+  #text{
+    margin-top: 20%;
+    padding-bottom: 100%;
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  #text{
+    font-size: 24px;
+  }
+}
+

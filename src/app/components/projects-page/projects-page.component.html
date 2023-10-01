@@ -1,5 +1,5 @@
+<p id="title" class="text">Mes réalisations</p>
 <div class="content">
-  <p id="title" class="text">Mes réalisations</p><br>
   <div class="cardContainer">
     <mat-card *ngFor="let project of projects" class="card" color="primary">
       <mat-card-header>
@@ -9,11 +9,12 @@
         <a href="{{project.htmlUrl}}"><img id="githubImg" mat-card-sm-image src="../../../assets/github.png"></a>
       </mat-card-header>
       <mat-card-content>
-        <img id="overview" mat-card-image onerror='this.style.display = "none"' src="../../../assets/overview/{{project.name}}.png">
+        <img id="overview" mat-card-image onerror='this.style.display = "none"'
+          src="../../../assets/overview/{{project.name}}.png">
         <p id="description" *ngIf="project.description!=''">Description : {{project.description}}</p>
       </mat-card-content>
       <mat-card-actions id="download">
-        <a href="{{project.downloadUrl}}" download ><span class="material-symbols-outlined">download</span></a>
+        <a href="{{project.downloadUrl}}" download><span class="material-symbols-outlined">download</span></a>
       </mat-card-actions>
     </mat-card>
   </div>
