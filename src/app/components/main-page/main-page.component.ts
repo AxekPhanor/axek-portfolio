@@ -12,6 +12,10 @@ export class MainPageComponent {
   constructor(private WheelEventService: WheelEventService) { }
 
   ngOnInit() {
-   //this.WheelEventService.scrollTo(this.page1, this.page2);
+    if (history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
+    } else {
+        window.scrollTo(0, 0);
+    }
   }
 }

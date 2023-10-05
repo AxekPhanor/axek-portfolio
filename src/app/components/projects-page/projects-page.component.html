@@ -4,7 +4,10 @@
     <mat-card *ngFor="let project of projects" class="card" color="primary">
       <mat-card-header>
         <mat-card-title>{{project.name}}</mat-card-title>
-        <mat-card-title>status : 🔴</mat-card-title>
+        <mat-card-title >status : <!--- TODO: utiliser un service pour vérifier que le site est en ligne -->
+          <span *ngIf="project.name == 'axek-portfolio'">🟢</span>
+          <span *ngIf="project.name != 'axek-portfolio'">🔴</span>
+        </mat-card-title>
         <mat-card-subtitle>Créer le : {{project.createdAt}}</mat-card-subtitle>
         <a href="{{project.htmlUrl}}"><img id="githubImg" mat-card-sm-image src="../../../assets/github.png"></a>
       </mat-card-header>

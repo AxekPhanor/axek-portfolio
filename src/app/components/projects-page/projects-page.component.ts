@@ -8,33 +8,33 @@ import { Project } from 'src/app/models/project';
   styleUrls: ['./projects-page.component.css']
 })
 export class ProjectsPageComponent {
-  @Output() projects : Project[] = [];
+  @Output() projects: Project[] = [];
 
-  constructor(private GithubAPIService: GithubAPIService){}
+  constructor(private GithubAPIService: GithubAPIService) { }
 
   ngOnInit() {
     this.GithubAPIService.getProjects()
-    .then((res) => {
-      for(let data of res.data){
-        let project: Project = {
-          id: data.id,
-          name: data.name,
-          description: "",
-          createdAt: "",
-          htmlUrl: data.html_url,
-          cloneUrl: data.clone_url,
-          downloadUrl: "https://github.com/AxekPhanor/"+data.name+"/archive/refs/heads/master.zip", //downloadUrl API NO LONGER SUPPORT
+      .then((res) => {
+        for (let data of res.data) {
+          let project: Project = {
+            id: data.id,
+            name: data.name,
+            description: "",
+            createdAt: "",
+            htmlUrl: data.html_url,
+            cloneUrl: data.clone_url,
+            downloadUrl: "https://github.com/AxekPhanor/" + data.name + "/archive/refs/heads/master.zip", //downloadUrl API NO LONGER SUPPORT
+          }
+          if (data.description) {
+            project.description = data.description;
+          }
+          if (data.created_at) {
+            project.createdAt = data.created_at.slice(0, 10);
+          }
+          if (project.name != "globalWarming") {
+            this.projects.push(project);
+          }
         }
-        if(data.description){
-          project.description = data.description;
-        }
-        if(data.created_at){
-          project.createdAt = data.created_at.slice(0, 10);
-        }
-        if(project.name != "globalWarming"){
-          this.projects.push(project);
-        }
-      }
-    });
+      });
   }
 }
